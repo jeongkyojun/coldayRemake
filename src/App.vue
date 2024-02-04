@@ -1,17 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="body">
+    <header-nav-bar></header-nav-bar>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderNavBar from "./components/layout/HeaderNavBar.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeaderNavBar,
+  },
+};
 </script>
 
 <style>
@@ -20,7 +21,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
+#body {
+  width: 99vw;
+  overflow-x: hidden;
+  min-height: 100%;
+  height: auto;
+  background-color: #0f1421;
+}
+
 </style>
