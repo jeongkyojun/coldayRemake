@@ -26,7 +26,7 @@ export default {
 #body {
   width: 99vw;
   overflow-x: hidden;
-  min-height: 100%;
+  min-height: 100vh;
   height: auto;
   background-color: #0f1421;
 }
