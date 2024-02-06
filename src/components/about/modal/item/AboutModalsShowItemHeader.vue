@@ -1,11 +1,13 @@
 <template>
   <modal-base ref="baseModal">
     <b-row>
+      <!-- 계절 표시부분 -->
       <b-col>
         <div class="header">
           <h1>{{ content.season }}</h1>
         </div>
       </b-col>
+      <!-- 모달 종료버튼 -->
       <b-col style="text-align: end; vertical-align: middle">
         <a @click="close_modal()" style="cursor: pointer"
           ><svg
@@ -27,7 +29,9 @@
         </a>
       </b-col>
     </b-row>
-    <hr style="margin-top: 5px" />
+    <!-- 구분선 -->
+    <hr style="margin-top: 5px;" />
+    <!-- 모달 설명부분 -->
     <b-row>
       <b-card
         class="body"
@@ -37,13 +41,14 @@
           height: 58vh;
         "
       >
-        <div>
+      <!-- 질병 목록 -->
+        <div id="diseases">
           <b-button
             v-for="(item, index) in content.entity"
             :key="(item.index = index)"
             @click="selItem(index)"
             variant="outline-primary"
-            style="border-color: white; color: white"
+            style="border-color: white; color: white;"
           >
             {{ item.name }}</b-button
           >
@@ -73,14 +78,6 @@
         </b-card-body>
       </b-card>
     </b-row>
-    <!-- <b-row>
-      <b-card
-        class="footer"
-        style="background-color: #1a2844; margin-top: 20px"
-      >
-        <b-button @click="close_modal"> close </b-button>
-      </b-card>
-    </b-row> -->
   </modal-base>
 </template>
 
@@ -145,6 +142,19 @@ export default {
 </script>
 
 <style>
+#diseases{
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+}
+#introduction{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  height: 8rem;
+}
 .card-body::-webkit-scrollbar {
   width: 6px;
 }

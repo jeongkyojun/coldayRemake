@@ -1,40 +1,40 @@
 <template>
-  <!-- 강조문일때 -->
-  <ul class="emphasize" v-if="isEmphasize">
-    <li>
-      <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
-    </li>
-    <about-modals-show-item-list
-      v-for="item in list"
-      :key="item.isEmphasize == false"
-      v-bind="item"
-    >
-    </about-modals-show-item-list>
-    <about-modals-show-item-list
-      v-for="item in emphasize"
-      :key="item.isEmphasize == true"
-      v-bind="item"
-    >
-    </about-modals-show-item-list>
-  </ul>
-  <!-- 강조문이 아닐때 -->
-  <ul v-else>
-    <li>
-      <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
-    </li>
-    <about-modals-show-item-list
-      v-for="item in list"
-      :key="item.isEmphasize == false"
-      v-bind="item"
-    >
-    </about-modals-show-item-list>
-    <about-modals-show-item-list
-      v-for="item in emphasize"
-      :key="item.isEmphasize == true"
-      v-bind="item"
-    >
-    </about-modals-show-item-list>
-  </ul>
+  <div id="block">
+    <ul class="emphasize" v-if="isEmphasize">
+      <li>
+        <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
+      </li>
+      <about-modals-show-item-list
+        v-for="item in list"
+        :key="item.isEmphasize == false"
+        v-bind="item"
+      >
+      </about-modals-show-item-list>
+      <about-modals-show-item-list
+        v-for="item in emphasize"
+        :key="item.isEmphasize == true"
+        v-bind="item"
+      >
+      </about-modals-show-item-list>
+    </ul>
+    <ul v-else>
+      <li>
+        <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
+      </li>
+      <about-modals-show-item-list
+        v-for="item in list"
+        :key="item.isEmphasize == false"
+        v-bind="item"
+      >
+      </about-modals-show-item-list>
+      <about-modals-show-item-list
+        v-for="item in emphasize"
+        :key="item.isEmphasize == true"
+        v-bind="item"
+      >
+      </about-modals-show-item-list>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -50,18 +50,33 @@ export default {
 </script>
 
 <style>
+#block{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid red;
+}
+
 .emphasize {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.emphasize li {
-  position: relative;
+li {
   margin: 2px 0 0 0;
   padding: 0 0 4px 16px;
   font-size: 16px;
   color: white;
+  width: 100%;
+  max-height: 100%;
+}
+
+.emphasize li {
+  margin: 2px 0 0 0;
+  padding: 0 0 4px 16px;
+  font-size: 16px;
+  color: gray;
 }
 
 .emphasize li:after {

@@ -18,40 +18,40 @@
         </div>
       </div>
       <nav>
-        <ul>
-          <li>
-            <a
+        <div id="ul">
+          <div id="li">
+            <div id="a"
               @click="openSeason(0)"
               :class="selected[0]"
               style="cursor: pointer"
-              >Spring</a
+              >Spring</div
             >
-          </li>
-          <li>
-            <a
+          </div>
+          <div id="li">
+            <div id="a"
               @click="openSeason(1)"
               :class="selected[1]"
               style="cursor: pointer"
-              >Summer</a
+              >Summer</div
             >
-          </li>
-          <li>
-            <a
+          </div>
+          <div id="li">
+            <div id="a"
               @click="openSeason(2)"
               :class="selected[2]"
               style="cursor: pointer"
-              >Autumn</a
+              >Autumn</div
             >
-          </li>
-          <li>
-            <a
+          </div>
+          <div id="li">
+            <div id="a"
               @click="openSeason(3)"
               :class="selected[3]"
               style="cursor: pointer"
-              >Winter</a
+              >Winter</div
             >
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </div>
   </div>
@@ -103,7 +103,7 @@ export default {
         "원하는 날짜를 선택하세요. 해당 날짜에 맞는 질병에 대한 안내를 띄워드립니다.",
       ],
       pictures: ["Spring.png", "Summer.png", "Autumn.png", "Winter.png", ""],
-      selNum: 4,
+      selNum: 0,
     };
   },
   methods: {
@@ -252,8 +252,12 @@ body {
   -webkit-transition-delay: 0.25s;
   -ms-transition-delay: 0.25s;
   transition-delay: 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 3rem 2rem;
-  max-height: 40rem;
+  width: 45rem;
+  height: 20rem;
   overflow: hidden;
 }
 
@@ -277,7 +281,7 @@ nav {
   padding: 0;
 }
 
-#header nav ul {
+#header nav #ul {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -289,16 +293,16 @@ nav {
   border-radius: 4px;
 }
 
-#header nav ul li {
+#header nav #ul #li {
   padding-left: 0;
   border-left: solid 1px #ffffff;
 }
 
-#header nav ul li:first-child {
+#header nav #ul #li:first-child {
   border-left: 0;
 }
 
-#header nav ul li a {
+#header nav #ul #li #a {
   display: block;
   min-width: 7.5rem;
   height: 2.75rem;
@@ -307,15 +311,16 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
+  font-weight: 800;
   border-bottom: 0;
+  color: #eeeeee;
 }
 
-#header nav ul li a:hover {
+#header nav #ul #li #a:hover {
   background-color: rgba(255, 255, 255, 0.075);
-  color: gray;
 }
 
-#header nav ul li .on {
+#header nav #ul #li .on {
   background-color: rgba(255, 255, 255, 0.175);
   color: #cccccc;
 }
