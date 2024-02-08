@@ -53,6 +53,7 @@
             {{ item.name }}</b-button
           >
         </div>
+      <!-- 질병 설명 -->
         <b-card-body
           style="
             overflow: auto;
@@ -63,6 +64,14 @@
           "
         >
           <div id="introduction">
+            <div id="diseaseName">
+              <div id="korean">
+                {{ content.entity[selectNum].name }}
+              </div>
+              <div id="english">
+                {{ '( '+content.entity[selectNum].english +' )'}}
+              </div>
+            </div>
             <div v-for="item in content.entity[selectNum].explain" :key="item">
               {{ item }}
             </div>
@@ -147,6 +156,17 @@ export default {
   flex-direction: row;
   height: 2rem;
 }
+#diseaseName{
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+#diseaseName #english{
+  font-weight: 500;
+  margin-left: 5px;
+}
+
 #introduction{
   display: flex;
   flex-direction:column;

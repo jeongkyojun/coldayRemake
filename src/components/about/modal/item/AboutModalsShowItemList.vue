@@ -2,7 +2,8 @@
   <div id="block">
     <ul class="emphasize" v-if="isEmphasize">
       <li>
-        <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
+        <!-- <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre> -->
+        {{title}}  <a v-for="item in text" :key="item"> {{item}} </a>
       </li>
       <about-modals-show-item-list
         v-for="item in list"
@@ -17,6 +18,7 @@
       >
       </about-modals-show-item-list>
     </ul>
+
     <ul v-else>
       <li>
         <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
