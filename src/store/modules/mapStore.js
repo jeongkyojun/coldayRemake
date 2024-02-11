@@ -1,20 +1,6 @@
 const mapStore = {
   namespaced: true,
   state: {
-    /*
-        address_name: "서울 중구 명동2가 32-5"
-        category_group_code: "HP8"
-        category_group_name: "병원"
-        category_name: "의료,건강 > 병원 > 피부과 > CNP차앤박피부과"
-        distance: ""
-        id: "11687292"
-        phone: "02-777-2488"
-        place_name: "CNP차앤박피부과 명동점"
-        place_url: "http://place.map.kakao.com/11687292"
-        road_address_name: "서울 중구 명동8길 17"
-        x: "126.984801539439"
-        y: "37.5630391684739"  
-        */
     hospital: {
       category_group_code: "HP8",
       category_group_name: "병원",
@@ -24,7 +10,10 @@ const mapStore = {
       category_group_code: "PM9",
       category_group_name: "약국",
     },
-    location: null,
+    location: {
+      lat: 126.984801539439,
+      lng: 37.5630391684739,
+    },
   },
   getters: {},
   mutations: {

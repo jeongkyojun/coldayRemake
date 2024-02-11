@@ -1,6 +1,6 @@
 <template>
   <div id="view_body">
-    <b-row>
+    <b-row class="rowOption">
       <b-col cols="4" v-if="resize">
         <map-l-option></map-l-option>
       </b-col>
@@ -9,22 +9,20 @@
         <maps-main></maps-main>
       </b-col>
     </b-row>
-    <b-row v-if="!resize">
+    <div v-if="!resize" class="underOption">
       <map-l-option></map-l-option>
-    </b-row>
+    </div>
   </div>
 </template>
 
 <script>
 import MapsMain from "@/components/maps/MapsMain.vue";
 import MapLOption from "@/components/maps/MapLOption.vue";
-//import MapROption from '@/components/maps/MapROption.vue'
 
 export default {
   components: {
     MapsMain,
     MapLOption,
-    //MapROption,
   },
   data() {
     return {
@@ -65,4 +63,26 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.view_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#rowOption{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100rem;
+
+}
+
+#underOption{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>

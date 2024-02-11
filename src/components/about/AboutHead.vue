@@ -338,12 +338,7 @@ nav {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  -moz-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  /* justify-content: space-between; */
   position: relative;
-  /* min-height: 100vh; */
   width: 100%;
   padding: 4rem 2rem;
   z-index: 3;
@@ -377,7 +372,6 @@ nav {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;

@@ -3,7 +3,7 @@
     <b-card id="maplist">
       <b-card-header> <h4>병원</h4> </b-card-header>
       <b-card-body class="list-space">
-        <div class="list-inner-space" style="overflow: auto; height: 220px">
+        <div class="list-inner-space" style="overflow: auto;">
           <map-l-option-list-item
             v-for="(item, index) in hospital.list"
             :key="(item.index = index)"
@@ -17,8 +17,8 @@
   <b-row>
     <b-card id="maplist">
       <b-card-header> <h4>약국</h4> </b-card-header>
-      <b-card-body class="list-space">
-        <div class="list-inner-space" style="overflow: auto; height: 220px">
+      <b-card-body class="list-space" >
+        <div class="list-inner-space" >
           <map-l-option-list-item
             v-for="(item, index) in pharmacy.list"
             :key="(item.index = index)"
@@ -55,11 +55,12 @@ export default {
 <style>
 #maplist {
   background-color: #0f1421;
-  padding-right: 0;
+  margin: 1rem;
 }
 
 #maplist > .card-body {
   padding-right: 0;
+  padding-left: 0;
   padding-bottom: 0;
 }
 
@@ -73,8 +74,15 @@ export default {
   padding-right: 0;
 }
 
+.list-inner-space{
+  height: 15rem;
+  overflow: auto;
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+
 .list-inner-space::-webkit-scrollbar {
-  width: 6px;
+  width: 0;
 }
 .list-inner-space::-webkit-scrollbar-track {
   background-color: transparent;
@@ -90,5 +98,7 @@ export default {
 
 .list-info {
   padding-right: 0;
+
+  background-color: #0f1421;
 }
 </style>

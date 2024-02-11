@@ -1,10 +1,10 @@
 <template>
-  <b-card>
-    <b-row>
-      <b-col cols="1" class="idx">{{ index + 1 }}</b-col>
-      <b-col cols="7">{{ place_name }}</b-col>
-      <b-col cols="4">{{ phone }} </b-col>
-    </b-row>
+  <b-card id="listcard">
+    <div id="listItem">
+      <div class="idx">{{ index + 1 }}</div>
+      <div class="name">{{ place_name }}</div>
+      <div class="pn">{{ phone }} </div>
+    </div>
   </b-card>
 </template>
 
@@ -19,6 +19,16 @@ export default {
 </script>
 
 <style>
+#listcard{
+}
+
+#listItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0f1421;
+  color: white;
+}
 .idx {
   padding: 0;
 }
