@@ -2,18 +2,17 @@
   <div id="block">
     <ul class="emphasize" v-if="isEmphasize">
       <li>
-        <!-- <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre> -->
-        {{title}}  <a v-for="item in text" :key="item"> {{item}} </a>
+        {{title}} <div v-for="item in text" :key="item"> {{item}} </div>
       </li>
       <about-modals-show-item-list
         v-for="item in list"
-        :key="item.isEmphasize == false"
+        :key="item.isEmphasize = false"
         v-bind="item"
       >
       </about-modals-show-item-list>
       <about-modals-show-item-list
         v-for="item in emphasize"
-        :key="item.isEmphasize == true"
+        :key="item.isEmphasize = true"
         v-bind="item"
       >
       </about-modals-show-item-list>
@@ -21,17 +20,17 @@
 
     <ul v-else>
       <li>
-        <pre>{{title}}  <a v-for="item in text" :key="item"> {{item}} </a></pre>
+        {{title}} <div v-for="item in text" :key="item"> {{item}} </div>
       </li>
       <about-modals-show-item-list
         v-for="item in list"
-        :key="item.isEmphasize == false"
+        :key="item.isEmphasize = false"
         v-bind="item"
       >
       </about-modals-show-item-list>
       <about-modals-show-item-list
         v-for="item in emphasize"
-        :key="item.isEmphasize == true"
+        :key="item.isEmphasize = true"
         v-bind="item"
       >
       </about-modals-show-item-list>
@@ -56,7 +55,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  border: 1px solid red;
 }
 
 .emphasize {
@@ -78,7 +76,8 @@ li {
   margin: 2px 0 0 0;
   padding: 0 0 4px 16px;
   font-size: 16px;
-  color: gray;
+  color: yellow;
+  font-weight: 600;
 }
 
 .emphasize li:after {
