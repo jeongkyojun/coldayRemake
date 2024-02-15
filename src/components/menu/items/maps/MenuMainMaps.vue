@@ -172,7 +172,6 @@ export default {
       this.store.dispatch("menuStore/set_score", this.scores[num - 1]);
       this.store.dispatch("menuStore/set_region", this.map_data[num - 1].name);
       this.store.dispatch("menuStore/set_r_num", num - 1);
-      // axios 처리 : 로컬에서는 주석처리하고 사용할 것!
       this.store.dispatch("menuStore/get_options_by_region", num - 1);
     },
   },
@@ -188,7 +187,7 @@ export default {
 }
 
 .OUTLINE :hover {
-  background-color: rgba(255, 255, 255, 0.075);
+  fill: rgba(255, 255, 255, 0.075);
   color: gray;
 }
 

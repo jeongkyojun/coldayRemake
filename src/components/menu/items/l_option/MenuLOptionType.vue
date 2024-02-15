@@ -83,7 +83,270 @@ export default {
     return {
       selected: ["", "", "", "", ""],
       disease_name: ["감기", "천식", "피부병", "눈병", "식중독"],
-      disease: ["cold", "asthma", "skin", "eye", "foodPoison"],
+      //disease: ["cold", "asthma", "skin", "eye", "foodPoison"],
+      disease: [
+        [
+          {
+            count: 740,
+            keyword: '예방',
+            disease: '감기',
+            id: '00',
+          },{
+            count: 1070,
+            keyword: '열',
+            disease: '감기',
+            id: '01',
+          },{
+            count: 1240,
+            keyword: '기침',
+            disease: '감기',
+            id: '02',
+          },{
+            count: 2450,
+            keyword: '바이러스',
+            disease: '감기',
+            id: '03',
+          },{
+            count: 2740,
+            keyword: '영어로',
+            disease: '감기',
+            id: '04',
+          },{
+            count: 3660,
+            keyword: '영화',
+            disease: '감기',
+            id: '05',
+          },{
+            count: 3990,
+            keyword: '유행',
+            disease: '감기',
+            id: '06',
+          },{
+            count: 4870,
+            keyword: '콧물',
+            disease: '감기',
+            id: '07',
+          },{
+            count: 5860,
+            keyword: '기침',
+            disease: '감기',
+            id: '08',
+          },{
+            count: 5940,
+            keyword: '열',
+            disease: '감기',
+            id: '09',
+          },
+        ],[
+          {
+            count: 130,
+            keyword: '한약',
+            disease: '천식',
+            id: '00',
+          },{
+            count: 290,
+            keyword: '비염',
+            disease: '천식',
+            id: '01',
+          },{
+            count: 820,
+            keyword: '가래',
+            disease: '천식',
+            id: '02',
+          },{
+            count: 990,
+            keyword: '알레르기',
+            disease: '천식',
+            id: '03',
+          },{
+            count: 1390,
+            keyword: '담배',
+            disease: '천식',
+            id: '04',
+          },{
+            count: 1460,
+            keyword: '소아',
+            disease: '천식',
+            id: '05',
+          },{
+            count: 1560,
+            keyword: '호흡기',
+            disease: '천식',
+            id: '06',
+          },{
+            count: 1610,
+            keyword: '병원',
+            disease: '천식',
+            id: '07',
+          },{
+            count: 2030,
+            keyword: '원인',
+            disease: '천식',
+            id: '08',
+          },{
+            count: 4730,
+            keyword: '치료',
+            disease: '천식',
+            id: '09',
+          },
+        ],[
+          {
+            count: 520,
+            keyword: '고양이',
+            disease: '피부병',
+            id: '00',
+          },{
+            count: 530,
+            keyword: '강아지',
+            disease: '피부병',
+            id: '01',
+          },{
+            count: 1140,
+            keyword: '병원',
+            disease: '피부병',
+            id: '02',
+          },{
+            count: 3070,
+            keyword: '습진',
+            disease: '피부병',
+            id: '03',
+          },{
+            count: 3660,
+            keyword: '질환',
+            disease: '피부병',
+            id: '04',
+          },{
+            count: 3670,
+            keyword: '염증',
+            disease: '피부병',
+            id: '05',
+          },{
+            count: 8780,
+            keyword: '피부염',
+            disease: '피부병',
+            id: '06',
+          },{
+            count: 11700,
+            keyword: '발진',
+            disease: '피부병',
+            id: '07',
+          },{
+            count: 19800,
+            keyword: '건선',
+            disease: '피부병',
+            id: '08',
+          },{
+            count: 512000,
+            keyword: '피부과',
+            disease: '피부병',
+            id: '09',
+          },
+        ],[
+          {
+            count: 140,
+            keyword: '영어로',
+            disease: '눈병',
+            id: '00',
+          },{
+            count: 720,
+            keyword: '전염',
+            disease: '눈병',
+            id: '01',
+          },{
+            count: 800,
+            keyword: '종류',
+            disease: '눈병',
+            id: '02',
+          },{
+            count: 1320,
+            keyword: '유행',
+            disease: '눈병',
+            id: '03',
+          },{
+            count: 2740,
+            keyword: '영어로',
+            disease: '감기',
+            id: '04',
+          },{
+            count: 1490,
+            keyword: '강아지',
+            disease: '눈병',
+            id: '05',
+          },{
+            count: 2260,
+            keyword: '아폴로',
+            disease: '눈병',
+            id: '06',
+          },{
+            count: 2940,
+            keyword: '고양이',
+            disease: '눈병',
+            id: '07',
+          },{
+            count: 3590,
+            keyword: '증상',
+            disease: '눈병',
+            id: '08',
+          },{
+            count: 14700,
+            keyword: '결막염',
+            disease: '눈병',
+            id: '09',
+          },
+        ],[
+          {
+            count: 2870,
+            keyword: '두드러기',
+            disease: '식중독',
+            id: '00',
+          },{
+            count: 3100,
+            keyword: '치료',
+            disease: '식중독',
+            id: '01',
+          },{
+            count: 3200,
+            keyword: '장염',
+            disease: '식중독',
+            id: '02',
+          },{
+            count: 3290,
+            keyword: '치료',
+            disease: '식중독',
+            id: '03',
+          },{
+            count: 4430,
+            keyword: '약',
+            disease: '식중독',
+            id: '04',
+          },{
+            count: 4470,
+            keyword: '원인',
+            disease: '식중독',
+            id: '05',
+          },{
+            count: 5700,
+            keyword: '증상',
+            disease: '식중독',
+            id: '06',
+          },{
+            count: 19700,
+            keyword: '카스타드',
+            disease: '식중독',
+            id: '07',
+          },{
+            count: 34600,
+            keyword: '담낭',
+            disease: '식중독',
+            id: '08',
+          },{
+            count: 35300,
+            keyword: '혈변',
+            disease: '식중독',
+            id: '09',
+          },
+        ],
+      ],
       entities: null,
       regions: null,
     };
@@ -142,15 +405,11 @@ export default {
     },
     // scores에 따라 지역의 색이 변화하게 한다.
     fillRegions() {
-      //console.log(
-      //this.min_score[this.d_type] + " , " + this.max_score[this.d_type],
-      //);
       for (let i = 0; i < this.regions.length; i++) {
         let color = "#";
         // 255 / 100 * scores[i]
         // let red = 0;
         let red = Math.floor((255 / 100) * this.scores[this.regions[i].id]);
-        // if (this.scores[this.regions[i].id] > 50) red = 255;
         const code = ["", "", "", "", "", ""];
         //빨강
         code[0] = Math.floor(red / 16);
@@ -217,7 +476,11 @@ export default {
 
 <style>
 #menu_nav {
-  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
   height: 40px;
 }
@@ -259,7 +522,10 @@ export default {
 #menu_type {
   color: white;
   border-color: white;
+  width: 18%;
+  font-size:0.8rem;
   margin: 0 3px;
+  z-index: 10;
 }
 #menu_type:hover {
   background-color: rgba(255, 255, 255, 0.075);

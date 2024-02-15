@@ -4,7 +4,9 @@
       <div
         id="map"
         style="width: 100%; height: 100%; position: relative; overflow: hidden"
-      ></div>
+      >
+        지도가 안보일 경우 새로고침(f5)을 눌러주세요
+      </div>
       <!-- 지도를 표시할 div 입니다 -->
       <ul id="category">
         <li

@@ -29,8 +29,7 @@ const twitStore = {
         },
       );
       */
-     const data = [];
-      commit("SET_TWIT", data);
+      commit("SET_TWIT", d_type);
     },
   },
 };
